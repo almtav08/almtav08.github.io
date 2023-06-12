@@ -22,8 +22,8 @@ scene.background = new THREE.Color( 0xffffff );
 var light = new THREE.HemisphereLight( 0xffffff, 0x080820, 1 );
 scene.add( light );
 
-camera.position.set( -0.5, 0.5, 0.3 );
-camera.lookAt( 0, 0.5, 0.3 );
+camera.position.set( -1, 0.7, 0 );
+camera.lookAt( 0, 0, 0 );
 
 var animate = function () {
     requestAnimationFrame( animate );

@@ -223,12 +223,12 @@
   ],
   "materials": [
     {
-      "name": "Material__22",
+      "name": "mesa",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0.9934210181236267,
-          0.0,
-          0.8344740271568298,
+          0.044552598148584366,
+          0.044552598148584366,
+          0.044552598148584366,
           1.0
         ],
         "metallicFactor": 0.0,
@@ -236,12 +236,25 @@
       }
     },
     {
-      "name": "Material__21",
+      "name": "teclado_y_ordenador",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          1.0,
-          0.0,
-          0.0,
+          0.008373119868338108,
+          0.008373119868338108,
+          0.008373119868338108,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.0
+      }
+    },
+    {
+      "name": "pantallas",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.01891300082206726,
+          0.01891300082206726,
+          0.01891300082206726,
           1.0
         ],
         "metallicFactor": 0.0,
@@ -287,7 +300,7 @@
             "POSITION": 6
           },
           "indices": 8,
-          "material": 1,
+          "material": 2,
           "mode": 4
         }
       ]
@@ -301,7 +314,7 @@
             "POSITION": 9
           },
           "indices": 11,
-          "material": 1,
+          "material": 2,
           "mode": 4
         }
       ]

@@ -19,7 +19,7 @@ loader.load( 'static/desktop.gltf', function ( gltf ) {
 );
 
 scene.background = new THREE.Color( 0xffffff );
-var light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
+var light = new THREE.HemisphereLight( 0xffffff, 0x080820, 1 );
 scene.add( light );
 
 camera.position.set( -0.5, 0.5, 0.3 );

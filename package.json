@@ -10,7 +10,6 @@
   "author": "Alex Martínez Martínez",
   "license": "ISC",
   "dependencies": {
-    "gh-pages": "^5.0.0",
     "three": "^0.153.0"
   },
   "devDependencies": {

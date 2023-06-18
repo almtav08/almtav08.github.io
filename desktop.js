@@ -8,7 +8,7 @@ renderer.setSize( canvas.clientWidth, canvas.clientHeight );
 canvas.appendChild( renderer.domElement );
 
 var loader = new GLTFLoader();
-loader.load( 'static/desktop.gltf', function ( gltf ) {
+loader.load( 'public/desktop.gltf', function ( gltf ) {
         gltf.scene.position.set(0, 0, 0);
         scene.add( gltf.scene );
     }, undefined, function ( error ) {

@@ -1,5 +1,11 @@
+import './projects.css'
+
 function Projects() {
-    return <h1>Projects</h1>
+    return (
+        <div className='projects'>
+            <h1>Projects</h1>
+        </div>
+    )
 }
 
 export default Projects

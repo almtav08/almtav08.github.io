@@ -1,5 +1,11 @@
+import './contact.css'
+
 function Contact() {
-    return <h1>Contact</h1>
+    return (
+        <div className='contact'>
+            <h1>Contact</h1>
+        </div>
+    )
 }
 
 export default Contact

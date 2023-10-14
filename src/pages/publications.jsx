@@ -1,5 +1,11 @@
+import './publications.css'
+
 function Publications() {
-    return <h1>Publications</h1>
+    return (
+        <div className='publications'>
+            <h1>Publications</h1>
+        </div>
+    )
 }
 
 export default Publications

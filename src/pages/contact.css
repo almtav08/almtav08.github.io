@@ -7,3 +7,16 @@
     align-items: center;
     justify-content: center;
 }
+
+.contact-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.contact-buttons a {
+    color: inherit;
+    text-decoration: none;
+}

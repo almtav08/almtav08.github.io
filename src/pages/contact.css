@@ -1,6 +1,6 @@
 .contact {
-    width: 100vw;
-    height: 95vh;
+    width: 100dvw;
+    height: 95dvh;
 
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 1vw;
+    gap: 1dvw;
 }
 
 .contact-buttons a {

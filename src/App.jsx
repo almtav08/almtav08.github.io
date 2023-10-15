@@ -5,31 +5,16 @@ import Projects from './pages/projects'
 import Publications from './pages/publications'
 import Contact from './pages/contact'
 import { Route, Routes } from 'react-router-dom'
+import About from './pages/about'
 
 function App() {
-
-  let component = null
-  switch (window.location.pathname) {
-    case '/':
-      component = <Landing />
-      break
-    case '/projects':
-      component = <Projects />
-      break
-    case '/publications':
-      component = <Publications />
-      break
-    case '/contact':
-      component = <Contact />
-      break
-  }
-
   return (
     <>
       <Navbar />
       <div className='active-page'>
         <Routes>
           <Route path='/' element={<Landing />} />
+          <Route path='/about' element={<About />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/publications' element={<Publications />} />
           <Route path='/contact' element={<Contact />} />

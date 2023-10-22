@@ -1,0 +1,74 @@
+.publications {
+    width: 100dvw;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+
+    text-align: center;
+    overflow-y: auto;
+}
+
+.card {
+    color: white;
+    text-align: center;
+
+    width: 80%;
+    border-radius: 0.5rem;
+
+    transition: transform 300ms ease;
+    background-color: rgba(26, 26, 26, 1);
+}
+
+.card:hover,
+.card:focus-within {
+    transform: scale(1.025);
+}
+
+.card-content {
+    align-self: stretch;
+    padding: 1.5rem;
+}
+
+.card-body {
+    color: rgba(255, 255, 255, 0.8);
+    white-space: pre-line;
+}
+
+.see-button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 0.5em 1.5em;
+    border-radius: 0.25rem;
+}
+
+.see-button:hover,
+.see-button:focus {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+.return-button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 0.5em 1.5em;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+}

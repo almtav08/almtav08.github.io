@@ -1,0 +1,42 @@
+.contact {
+    width: 100dvw;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2dvw;
+}
+
+.contact-buttons a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-option {
+    width: 8em;
+    height: 8em;
+}
+
+.contact-option img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (hover) {
+    .contact-option:hover {
+        transform: scale(1.2);
+        transition: transform 300ms ease-in;
+        filter: drop-shadow(0 0 0.5em #fff);
+    }
+}

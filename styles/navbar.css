@@ -17,6 +17,8 @@
 .primary-header {
     align-items: center;
     justify-content: space-between;
+
+    height: 10dvh;
 }
 
 .mobile-nav-toggle {
@@ -73,7 +75,10 @@
         z-index: 9999;
     }
 
-
+    .logo {
+        padding-top: 2rem;
+        padding-left: 0.75rem;
+    }
 }
 
 .active:after,

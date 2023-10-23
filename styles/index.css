@@ -27,6 +27,7 @@ body {
 
 .page {
   width: 100dvw;
+  height: 90dvh;
 }
 
 .page .publications::-webkit-scrollbar, .page .projects::-webkit-scrollbar {

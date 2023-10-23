@@ -30,7 +30,6 @@ data.forEach(publication => {
 });
 
 publications.addEventListener('scroll', () => {
-    console.log(publications.querySelector('.return-button'))
     if (!publications.querySelector('.return-button')) {
         const returnButton = document.createElement('div')
         returnButton.classList.add('return-button');

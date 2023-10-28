@@ -1,6 +1,9 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
+
+const contacts = await Astro.glob("../content/contact/*.md");
+const address = contacts[0].frontmatter.address;
 ---
 
 <Layout title="Alex Martínez Martínez">
@@ -9,9 +12,6 @@ import Layout from "../layouts/Layout.astro";
 		<div class="contact flex">
 			<form
 				class="contact-form flex"
-				action="https://mailto:alemarti@uji.es"
-				method="get"
-				target="_blank"
 			>
 				<div class="inputs-area flex">
 					<div class="form-group">
@@ -21,7 +21,6 @@ import Layout from "../layouts/Layout.astro";
 							name="email"
 							class="form-control"
 							placeholder=" "
-							required
 							autocomplete="on"
 						/>
 						<label for="email" class="label">Email</label>
@@ -33,7 +32,6 @@ import Layout from "../layouts/Layout.astro";
 								name="subject"
 								class="form-control"
 								placeholder=" "
-								required
 							/>
 						<label for="subject" class="label">Subject</label>
 					</div>
@@ -44,8 +42,7 @@ import Layout from "../layouts/Layout.astro";
 								class="form-control"
 								rows="6"
 								maxlength="3000"
-								placeholder=" "
-								required></textarea>
+								placeholder=" "></textarea>
 						<label for="message" class="label">Message</label>
 					</div>
 				</div>
@@ -56,9 +53,10 @@ import Layout from "../layouts/Layout.astro";
 			 or
 			<div class="contact-buttons flex">
 				<a
-					href="mailto:alemarti@uji.es"
+					href=`mailto:${address}`
 					target="_blank"
 					class="contact-option"
+					id="email-contact-option"
 				>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
 						><path
@@ -124,4 +122,5 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</div>
 	</section>
+	<script src="../scripts/contact.js"></script>
 </Layout>

@@ -1,4 +1,8 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="description" content="Astro description"><meta name="viewport" content="width=device-width"><link rel="shortcut icon" type="image/svg+xml" href="/logo-icon.jpg"><meta name="generator" content="Astro v3.3.4"><title>Alex Martínez Martínez</title><link rel="stylesheet" href="/_astro/about.fd541f5b.css" /><script type="module" src="/_astro/hoisted.b74da53f.js"></script></head><body><header class="primary-header flex"><div class="logo"><a href="/"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve"><path opacity="1.000000" stroke="none" d="
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	width="100%" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
+<path opacity="1.000000" stroke="none" 
+	d="
 M546.998169,729.000000 
 	C539.999023,728.988220 533.498596,728.909485 527.000061,728.988647 
 	C522.768921,729.040100 520.872253,727.053589 521.021057,722.892944 
@@ -43,7 +47,9 @@ M546.998169,729.000000
 	C564.999878,524.906189 565.000488,621.402100 564.998474,717.897949 
 	C564.998230,728.991699 564.991394,728.992004 553.995605,728.999756 
 	C551.829590,729.001282 549.663635,729.000000 546.998169,729.000000 
-z"></path><path opacity="1.000000" stroke="none" d="
+z"/>
+<path opacity="1.000000" stroke="none" 
+	d="
 M192.999252,361.008362 
 	C212.056244,333.558472 237.282898,314.903870 268.231140,303.437103 
 	C315.311523,285.993195 362.168579,286.015533 408.724060,304.784302 
@@ -78,4 +84,5 @@ M306.540710,338.992218
 	C467.822144,435.321320 462.305634,417.149841 452.974487,400.098022 
 	C445.503815,386.446106 437.160034,373.073547 424.433044,363.855499 
 	C389.233978,338.360962 350.015594,330.215179 306.540710,338.992218 
-z"></path></svg></a></div><div class="mobile-nav-toggle div-menu-one" aria-controls="primary-navigation" aria-expanded="false"><svg class="hamburger" viewBox="0 0 100 100" width="2rem" height="2rem"><rect class="line top" width="80" height="10" x="10" y="25" rx="5"></rect><rect class="line middle" width="80" height="10" x="10" y="45" rx="5"></rect><rect class="line bottom" width="80" height="10" x="10" y="65" rx="5"></rect></svg></div><nav><ul id="primary-navigation" data-visible="false" class="primary-navigation flex"><li class="link active"><a class="link-ref" href="/">Home</a></li><li class="link"><a class="link-ref" href="/about">About</a></li><li class="link"><a class="link-ref" href="/projects">Projects</a></li><li class="link"><a class="link-ref" href="/publications">Publications</a></li><li class="link"><a class="link-ref" href="/contact">Contact</a></li></ul></nav></header><section class="section flex"><div class="info flex"><h1 class="name">Alex Martínez Martínez</h1><h2 class="roles">Ph.D in Artificial Intelligence</h2><h2 class="roles">Software Engineer</h2></div></section></body></html>
+z"/>
+</svg>

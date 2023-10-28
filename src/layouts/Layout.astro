@@ -1,0 +1,25 @@
+---
+import '../styles/index.scss';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="shortcut icon" type="image/svg+xml" href="/logo-icon.jpg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<script src="../scripts/theme.js"></script>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

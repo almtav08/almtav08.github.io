@@ -1,0 +1,27 @@
+---
+interface Props {
+    title: string;
+    published: string;
+    authors: string;
+    doi: string;
+    year: string;
+}
+
+const { title, published, authors, doi, year } = Astro.props;
+---
+
+<div class="card fade-in">
+    <div class="card-content">
+        <h2 class="card-title">
+            {title} ({year})
+        </h2>
+        <p class="card-body">
+            {published}
+            <br>
+            {authors}
+        </p>
+        <a
+            class="see-button"
+            href=`https://doi.org/${doi}` target="_blank">See article</a>
+    </div>
+</div>

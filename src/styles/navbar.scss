@@ -1,0 +1,153 @@
+.primary-header {
+    --align-items: center;
+    --justify-content: space-between;
+
+    width: 100%;
+    height: 10dvh;
+}
+
+.logo {
+    width: 4em;
+    height: 4em;
+    padding-left: 1.5rem;
+
+    svg {
+        fill: var(--color);
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 0.5em var(--color));
+}
+
+.primary-navigation {
+    --gap: 3rem;
+    --align-items: center;
+    --justify-content: flex-end;
+
+    list-style: none;
+    margin: 0;
+
+    padding-block: 2rem;
+    padding-inline: clamp(3rem, 10vw, 10rem);
+
+    .link-ref {
+        color: inherit;
+        text-decoration: none;
+        font-weight: 600;
+    }
+}
+
+.mobile-nav-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.active:after,
+.link:after {
+    transition: all 0.5s;
+}
+
+.active:after,
+.link {
+    position: relative;
+    width: max-content;
+}
+
+.link:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: "";
+    color: transparent;
+    background: #646cff;
+    height: 2px;
+}
+
+.active:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: "";
+    color: transparent;
+    background: rgb(231, 23, 23);
+    height: 2px;
+}
+
+.active:after,
+.link:hover:after {
+    width: 100%;
+}
+
+.hamburger {
+    fill: var(--color);
+}
+
+.div-menu-one .line {
+    transition:
+        y 300ms ease-in 300ms,
+        rotate 300ms ease-in,
+        opacity 0ms 300ms;
+    transform-origin: center;
+}
+
+.div-menu-one[aria-expanded="true"] .line {
+    transition:
+        y 300ms ease-in,
+        rotate 300ms ease-in 300ms,
+        opacity 0ms 300ms;
+}
+
+.div-menu-one[aria-expanded="true"] .top {
+    y: 45;
+    rotate: 45deg;
+}
+
+.div-menu-one[aria-expanded="true"] .bottom {
+    y: 45;
+    rotate: -45deg;
+}
+
+.div-menu-one[aria-expanded="true"] .middle {
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .primary-navigation {
+        --gap: 1rem;
+
+        position: fixed;
+        inset: 0 0 0 30%;
+
+        --flex-direction: column;
+        --justify-content: flex-start;
+        --align-items: flex-start;
+        padding: min(30dvh, 8rem) 2em;
+
+        z-index: 9000;
+        background: #646cff;
+
+        transform: translateX(100%);
+        transition: transform 300ms ease-in;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 9999;
+    }
+}

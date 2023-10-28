@@ -1,0 +1,69 @@
+@use "navbar.scss";
+@use "landing.scss";
+@use "contact.scss";
+@use "publications.scss";
+@use "projects.scss";
+
+:root {
+    --clr-background: #242424;
+    --button-bg: rgb(231, 23, 23);
+    --color: rgba(255, 255, 255, 0.87);
+    --speed: 4s;
+    --card-bg: #1a1a1a;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --clr-background: #fff;
+        --color: #213547;
+        --card-bg: #f9f9f9;
+    }
+}
+
+.light-theme {
+    --clr-background: #fff;
+    --card-bg: #f9f9f9;
+    --color: #213547;
+}
+
+.dark-theme {
+    --clr-background: #242424;
+    --color: rgba(255, 255, 255, 0.87);
+    --card-bg: #1a1a1a;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+
+    color-scheme: dark;
+    color: var(--color);
+    background-color: var(--clr-background);
+
+    overflow: hidden;
+
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+.flex {
+    display: flex;
+    flex-direction: var(--flex-direction, row);
+    flex-wrap: var(--flex-wrap, wrap);
+    gap: var(--gap, 1dvw);
+    justify-content: var(--justify-content, center);
+    align-items: var(--align-items, center);
+}
+
+.section {
+    width: 100%;
+    height: 90dvh;
+}

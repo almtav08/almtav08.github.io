@@ -1,0 +1,19 @@
+{
+  "name": "alex-mm-web",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "astro": "^3.3.4",
+    "gh-pages": "^6.0.0",
+    "sass": "^1.69.4"
+  }
+}

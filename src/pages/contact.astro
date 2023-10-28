@@ -1,0 +1,128 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Alex Martínez Martínez">
+	<Navbar active="contact" />
+	<section class="section flex">
+		<div class="contact flex">
+			<form
+				class="contact-form flex"
+				action="mailto:alemarti@uji.es"
+				method="get"
+				enctype="text/plain"
+				target="_blank"
+			>
+				<div class="inputs-area flex">
+					<div class="form-group">
+						<input
+							type="text"
+							id="email"
+							name="email"
+							class="form-control"
+							placeholder=" "
+							required
+							autocomplete="on"
+						/>
+						<label for="email" class="label">Email</label>
+					</div>
+					<div class="form-group">
+							<input
+								type="text"
+								id="subject"
+								name="subject"
+								class="form-control"
+								placeholder=" "
+								required
+							/>
+						<label for="subject" class="label">Subject</label>
+					</div>
+					<div class="form-group">
+							<textarea
+								name="body"
+								id="message"
+								class="form-control"
+								rows="6"
+								maxlength="3000"
+								placeholder=" "
+								required></textarea>
+						<label for="message" class="label">Message</label>
+					</div>
+				</div>
+				<div class="form-group flex">
+					<button type="submit" id="submit">Send Message</button>
+				</div>
+			</form>
+			 or
+			<div class="contact-buttons flex">
+				<a
+					href="mailto:alemarti@uji.es"
+					target="_blank"
+					class="contact-option"
+				>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
+						><path
+							d="M 14 4 C 8.4886661 4 4 8.4886661 4 14 L 4 36 C 4 41.511334 8.4886661 46 14 46 L 36 46 C 41.511334 46 46 41.511334 46 36 L 46 14 C 46 8.4886661 41.511334 4 36 4 L 14 4 z M 14 6 L 36 6 C 40.430666 6 44 9.5693339 44 14 L 44 36 C 44 40.430666 40.430666 44 36 44 L 14 44 C 9.5693339 44 6 40.430666 6 36 L 6 14 C 6 9.5693339 9.5693339 6 14 6 z M 13 15 C 11.35503 15 10 16.35503 10 18 L 10 32 C 10 33.64497 11.35503 35 13 35 L 37 35 C 38.64497 35 40 33.64497 40 32 L 40 18 C 40 16.35503 38.64497 15 37 15 L 13 15 z M 13.414062 17 L 36.583984 17 L 27.677734 25.892578 C 26.18494 27.382984 23.796834 27.382819 22.304688 25.890625 L 13.414062 17 z M 38 18.412109 L 38 31.587891 L 31.402344 25 L 38 18.412109 z M 12 18.414062 L 18.585938 25 L 12 31.585938 L 12 18.414062 z M 29.988281 26.412109 L 36.585938 33 L 13.414062 33 L 20 26.414062 L 20.890625 27.304688 C 23.146478 29.56054 26.832638 29.562194 29.089844 27.308594 L 29.988281 26.412109 z"
+						></path></svg
+					>
+				</a>
+				<a
+					href="https://github.com/almtav08"
+					target="_blank"
+					class="contact-option"
+				>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+						><path
+							d="M10.9,2.1c-4.6,0.5-8.3,4.2-8.8,8.7c-0.5,4.7,2.2,8.9,6.3,10.5C8.7,21.4,9,21.2,9,20.8v-1.6c0,0-0.4,0.1-0.9,0.1 c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C5.1,16.3,5,16.3,5,16.2C5,16,5.3,16,5.4,16c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1 c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C7.1,8.8,7,8.3,7,7.6C7,7.2,7,6.6,7.3,6 c0,0,1.4,0,2.8,1.3C10.6,7.1,11.3,7,12,7s1.4,0.1,2,0.3C15.3,6,16.8,6,16.8,6C17,6.6,17,7.2,17,7.6c0,0.8-0.1,1.2-0.2,1.4 c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3 C22,6.1,16.9,1.4,10.9,2.1z"
+						></path></svg
+					>
+				</a>
+				<a
+					href="https://www.linkedin.com/in/alex-martinez-martinez/"
+					target="_blank"
+					class="contact-option"
+				>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
+						><path
+							d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"
+						></path></svg
+					>
+				</a>
+				<a
+					href="https://orcid.org/0000-0002-3751-705X"
+					target="_blank"
+					class="contact-option"
+				>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+						><path
+							d="M 16 3 C 8.8321388 3 3 8.832144 3 16 C 3 23.167856 8.8321388 29 16 29 C 23.167861 29 29 23.167856 29 16 C 29 8.832144 23.167861 3 16 3 z M 16 5 C 22.086982 5 27 9.9130223 27 16 C 27 22.086978 22.086982 27 16 27 C 9.9130183 27 5 22.086978 5 16 C 5 9.9130223 9.9130183 5 16 5 z M 11 8 A 1 1 0 0 0 11 10 A 1 1 0 0 0 11 8 z M 10 11 L 10 22 L 12 22 L 12 11 L 10 11 z M 14 11 L 14 12 L 14 22 L 18.5 22 C 21.525577 22 24 19.525577 24 16.5 C 24 13.474423 21.525577 11 18.5 11 L 14 11 z M 16 13 L 18.5 13 C 20.444423 13 22 14.555577 22 16.5 C 22 18.444423 20.444423 20 18.5 20 L 16 20 L 16 13 z"
+						></path></svg
+					>
+				</a>
+				<a
+					href="https://www.instagram.com/almtav8/"
+					target="_blank"
+					class="contact-option"
+				>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
+						><path
+							d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"
+						></path></svg
+					>
+				</a>
+				<a
+					href="https://twitter.com/almtav08"
+					target="_blank"
+					class="contact-option"
+				>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
+						><path
+							d="M 5.9199219 6 L 20.582031 27.375 L 6.2304688 44 L 9.4101562 44 L 21.986328 29.421875 L 31.986328 44 L 44 44 L 28.681641 21.669922 L 42.199219 6 L 39.029297 6 L 27.275391 19.617188 L 17.933594 6 L 5.9199219 6 z M 9.7167969 8 L 16.880859 8 L 40.203125 42 L 33.039062 42 L 9.7167969 8 z"
+						></path></svg
+					>
+				</a>
+			</div>
+		</div>
+	</section>
+</Layout>

@@ -1,0 +1,68 @@
+.info {
+    width: 100%;
+    height: 100%;
+
+    --flex-direction: column;
+    --align-items: center;
+    --justify-content: center;
+    --gap: 0px;
+}
+
+.name {
+    text-align: center;
+    font-size: clamp(1.5rem, 3vw, 5rem);
+    font-family: "Source Sans Pro", monospace;
+    position: relative;
+}
+
+.roles {
+    margin: 0 auto;
+    text-align: center;
+    font-size: clamp(1rem, 1.5vw, 3rem);
+    font-family: "Source Sans Pro", monospace;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--speed) + 2s) forwards;
+}
+
+.name::before,
+.name::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.name::before {
+    background-color: var(--clr-background);
+    animation: typewritter var(--speed) steps(22) 1s forwards;
+}
+
+.name::after {
+    width: 0.125em;
+    background-color: var(--color);
+    animation:
+        typewritter var(--speed) steps(22) 1s forwards,
+        blink 500ms steps(22) infinite;
+}
+
+@keyframes typewritter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

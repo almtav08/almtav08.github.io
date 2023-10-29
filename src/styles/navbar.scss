@@ -3,40 +3,42 @@
     --justify-content: space-between;
 
     width: 100%;
-    height: 10dvh;
-}
+    position: fixed;
+    z-index: 9000;
+    background: var(--clr-background);
 
-.logo {
-    width: 4em;
-    height: 4em;
-    padding-left: 1.5rem;
+    .logo {
+        width: 4em;
+        height: 4em;
+        padding-left: 1.5rem;
 
-    svg {
-        fill: var(--color);
-        width: 100%;
-        height: 100%;
+        svg {
+            fill: var(--color);
+            width: 100%;
+            height: 100%;
+        }
     }
-}
 
-.logo:hover {
-    filter: drop-shadow(0 0 0.5em var(--color));
-}
+    .logo:hover {
+        filter: drop-shadow(0 0 0.5em var(--color));
+    }
 
-.primary-navigation {
-    --gap: 3rem;
-    --align-items: center;
-    --justify-content: flex-end;
+    .primary-navigation {
+        --gap: 3rem;
+        --align-items: center;
+        --justify-content: flex-end;
 
-    list-style: none;
-    margin: 0;
+        list-style: none;
+        margin: 0;
 
-    padding-block: 2rem;
-    padding-inline: clamp(3rem, 10vw, 10rem);
+        padding-block: 2rem;
+        padding-inline: clamp(3rem, 10vw, 10rem);
 
-    .link-ref {
-        color: inherit;
-        text-decoration: none;
-        font-weight: 600;
+        .link-ref {
+            color: inherit;
+            text-decoration: none;
+            font-weight: 600;
+        }
     }
 }
 
@@ -121,26 +123,32 @@
 }
 
 @media (max-width: 768px) {
-    .primary-navigation {
-        --gap: 1rem;
+    .primary-header {
+        .primary-navigation {
+            --gap: 1rem;
 
-        position: fixed;
-        inset: 0 0 0 30%;
+            position: fixed;
+            inset: 0 0 0 30%;
 
-        --flex-direction: column;
-        --justify-content: flex-start;
-        --align-items: flex-start;
-        padding: min(30dvh, 8rem) 2em;
+            --flex-direction: column;
+            --justify-content: flex-start;
+            --align-items: flex-start;
+            padding: min(30dvh, 8rem) 2em;
 
-        z-index: 9000;
-        background: #646cff;
+            z-index: 9000;
+            background: #646cff;
 
-        transform: translateX(100%);
-        transition: transform 300ms ease-in;
-    }
+            transform: translateX(100%);
+            transition: transform 300ms ease-in;
 
-    .primary-navigation[data-visible="true"] {
-        transform: translateX(0);
+            .logo {
+                padding-left: 1rem;
+            }
+        }
+
+        .primary-navigation[data-visible="true"] {
+            transform: translateX(0);
+        }
     }
 
     .mobile-nav-toggle {

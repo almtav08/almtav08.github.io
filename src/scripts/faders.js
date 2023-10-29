@@ -1,9 +1,9 @@
 const faders = document.querySelectorAll('.fade-in');
-const returnButton = document.querySelector('.return-button');
-const publications = document.querySelector('.publications');
+const returnButton = document.querySelector('.return');
+const publications = document.querySelector('.list-page');
 
 const appearOptions = { 
-    threshold: 0.5,
+    threshold: 0.25,
     rootMargin: "0px 0px -20% 0px"
 };
 
@@ -23,14 +23,15 @@ faders.forEach(fader => {
 });
 
 returnButton.addEventListener('click', () => {
-    publications.scrollTo({top: 0, behavior: 'smooth'});
-    console.log('clicked');
+    window.scrollTo({ top: 0, behavior: 'smooth' })
 });
 
-publications.addEventListener('scroll', () => {
-    if (publications.scrollTop > 0) {
-        returnButton.style.display = 'grid';
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        returnButton.style.display = 'inline-block';
     } else {
         returnButton.style.display = 'none';
     }
 });
+
+console.log(window.scrollY)

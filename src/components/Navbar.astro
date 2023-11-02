@@ -8,7 +8,7 @@ const { active } = Astro.props;
 
 <header class="primary-header flex">
     <div class="logo">
-        <a href="/">
+        <a href="/" aria-label="Navigate to homepage">
         <svg
             version="1.1"
             id="Layer_1"
@@ -145,19 +145,19 @@ z"
             class="primary-navigation flex"
         >
             <li class={active === "index" ? "link active" : "link"}>
-                <a class="link-ref" href="/">Home</a>
+                <a class="link-ref" href="/" aria-label="Navigate to homepage">Home</a>
             </li>
             <li class={active === "about" ? "link active" : "link"}>
-                <a class="link-ref" href="/about">About</a>
+                <a class="link-ref" href="/about" aria-label="Navigate to about page">About</a>
             </li>
             <li class={active === "projects" ? "link active" : "link"}>
-                <a class="link-ref" href="/projects">Projects</a>
+                <a class="link-ref" href="/projects" aria-label="Navigate to projects page">Projects</a>
             </li>
             <li class={active === "publications" ? "link active" : "link"}>
-                <a class="link-ref" href="/publications">Publications</a>
+                <a class="link-ref" href="/publications" aria-label="Navigate to publications page">Publications</a>
             </li>
             <li class={active === "contact" ? "link active" : "link"}>
-                <a class="link-ref" href="/contact">Contact</a>
+                <a class="link-ref" href="/contact" aria-label="Navigate to contact page">Contact</a>
             </li>
         </ul>
     </nav>

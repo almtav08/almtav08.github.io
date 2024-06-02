@@ -3,8 +3,60 @@ import Navbar from '../components/Navbar.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 <Layout title="Alex Martínez Martínez">
 	<Navbar active='about'/>
 	<section class="section flex">
+		<div class="about flex page">
+			<div class="about-intro flex">
+				<h1 class='intro'>
+					Hi there 🤗! I am Alex Martínez Martínez from Spain. Currently I am working in my Ph.D. about Artificial Intelligence 🤖. I am also a Software Engineer and a Full-Stack Developer.
+					<hr>
+					Thanks to my Ph.D. journey I've been able to participate in several international conferences and publish scientific papers. I've also perform different training sessions about AI.
+					<hr>
+					Among my hobbies are reading 📕, playing video games 👾... even some 3d modeling!
+				</h1>
+			</div>
+		</div>
+		<div class="about flex page">
+			<div class="technologies flex">
+				<div class="technology flex">
+					<div class="language">Python</div>
+					<div class="level">Expert</div>
+				</div>
+				<div class="technology flex">
+					<div class="language">Javascript / Typescript</div>
+					<div class="level">Expert</div>
+				</div>
+				<div class="technology flex">
+					<div class="language">Java / Kotlin</div>
+					<div class="level">Expert</div>
+				</div>
+				<div class="technology flex">
+					<div class="language">PHP</div>
+					<div class="level">Expert</div>
+				</div>
+				<div class="technology flex">
+					<div class="language">C / C++</div>
+					<div class="level">High Level</div>
+				</div>
+				<div class="technology flex">
+					<div class="language">C#</div>
+					<div class="level">High Level</div>
+				</div>
+				<div class="technology flex">
+					<div class="language">Flutter</div>
+					<div class="level">Learning</div>
+				</div>
+				<div class="technology flex">
+					<div class="language">Go</div>
+					<div class="level">Learning</div>
+				</div>
+			</div>
+		</div>
+		<div class="about flex page">
+			<model-viewer src="desktop.gltf" alt="A 3D model" camera-orbit="-75deg 70deg" auto-rotate class="model-3d"></model-viewer>
+		</div>
 	</section>
 </Layout>

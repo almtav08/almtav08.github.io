@@ -1,16 +1,50 @@
 ---
-import Navbar from '../components/Navbar.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "@/layouts/Layout.astro"
+
+import CodeIcon from "@/components/icons/Code.astro"
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+import Hero from "@/components/Hero.astro"
 ---
 
-<Layout title="Alex Martínez Martínez">
-	<Navbar active='index'/>
-	<section class="section flex">
-		<div class='info flex page'>
-            <h1 class='name'>Alex Martínez Martínez</h1>
-            <h2 class="roles">Ph.D. in Artificial Intelligence</h2>
-            <h2 class="roles">Software Engineer</h2>
-            <h2 class="roles">alemarti AT uji DOT es</h2>
-        </div>
-	</section>
+<Layout
+  title="Alex Martínez-Martínez"
+  description="Página web personal de Alkex Martínez-Martínez, donde se enlazan todos sus proyectos y contribuciones académicas."
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-28">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+
+      <SectionContainer id="sobre-mi">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white"
+        >
+          <ProfileCheck class="size-7" />
+          Sobre mí
+        </h2>
+      </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white"
+      >
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+    </SectionContainer>
+
+    <SectionContainer id="publicaciones">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white"
+      >
+        <CodeIcon class="size-7" />
+        Publicaciones
+      </h2>
+    </SectionContainer>
+  </div>
+  </main>
 </Layout>

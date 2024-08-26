@@ -1,20 +1,26 @@
 {
-  "name": "alex-mm-web",
+  "name": "almtav08-portfolio",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "predeploy": "pnpm run build",
-    "deploy": "gh-pages -d dist"
+    "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/partytown": "^2.0.2",
-    "astro": "^3.3.4",
-    "gh-pages": "^6.0.0",
-    "sass": "^1.69.4"
+    "@astrojs/check": "^0.8.3",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/onest": "^5.0.5",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
+    "astro": "^4.12.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sonner": "^1.5.0",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.5.4"
   }
 }

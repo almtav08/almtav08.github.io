@@ -1,73 +1,58 @@
 ---
-import "../styles/index.scss";
+import "@fontsource-variable/onest"
+
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import { ViewTransitions } from "astro:transitions"
 
 interface Props {
-	title: string;
+  title: string
+  description: string
 }
 
-const { title } = Astro.props;
+const { description, title } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="shortcut icon" type="image/svg+xml" href="/logo-icon-48.jpg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-		<meta name="author" content="Alex Martínez Martínez" />
-		<meta
-			name="description"
-			content="Official website of Alex Martínez Martínez. Hello, I am Alex Martínez a Ph.D. student at the Universitat Jaume  I in Castellón, Spain. My current focus is the use of Artificial Intelligence in education."
-		/>
-		<meta itemprop="name" content="Alex Martínez Martínez" />
-		<meta property="og:title" content="Alex Martínez Martínez" />
-		<meta property="og:type" content="website" />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:site" content="@almtav08" />
-		<meta name="twitter:creator" content="@almtav08" />
-		<meta property="og:image:type" content="image/jpg" />
-		<meta property="og:image:width" content="1024" />
-		<meta property="og:image:height" content="1024" />
-		<meta property="og:image:alt" content="Alex Martínez Martínez" />
-		<meta property="og:image" content="https://i.imgur.com/7xaJQpn.jpg" />
-		<meta name="twitter:image:type" content="image/jpg" />
-		<meta name="twitter:image" content="https://i.imgur.com/7xaJQpn.jpg" />
-		<meta name="twitter:image:alt" content="Alex Martínez Martínez" />
-		<meta name="twitter:title" content="Alex Martínez Martínez" />
-		<meta
-			name="twitter:description"
-			content="Official website of Alex Martínez Martínez. Hello, I am Alex Martínez a Ph.D. student at the Universitat Jaume  I in Castellón, Spain. My current focus is the use of Artificial Intelligence in education."
-		/>
-		<meta property="og:url" content="https://almtav08.github.io" />
-		<meta
-			property="og:description"
-			content="Official website of Alex Martínez Martínez. Hello, I am Alex Martínez a Ph.D. student at the Universitat Jaume  I in Castellón, Spain. My current focus is the use of Artificial Intelligence in education."
-		/>
-		<meta property="og:site_name" content="Alex Martínez Martínez" />
-		<script type="application/ld+json">
-			{
-			  "@context": "https://schema.org",
-			  "@type": "Organization",
-			  "url": "https://almtav08.github.io/",
-			  "logo": "https://i.imgur.com/7xaJQpn.jpg"
-			}
-			</script>
-		<meta name="google-site-verification" content="HPUBFyllVvmjtSqVfOeZLAtqIBYmKCC3p8Fg-2KpGOo" />
-		<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-Q2KBPB0XL6"></script>
-		<script type="text/partytown">
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
 
-			gtag('config', 'G-Q2KBPB0XL6');
-		</script>
-		<script src="../scripts/theme.js"></script>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <body class="relative text-white">
+    <div class="absolute top-0 z-[-2] h-full w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+    <Header />
+    <slot />
+    <Footer />
+    <style is:global>
+      :root {
+        color-scheme: dark;
+      }
+
+      html {
+        font-family: "Onest Variable", system-ui, sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        color: rgba(255, 255, 255, 0.9);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        overscroll-behavior: none;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </body>
 </html>

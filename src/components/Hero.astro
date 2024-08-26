@@ -1,0 +1,68 @@
+---
+import LinkedInIcon from "@/components/icons/LinkedIn.astro"
+import SocialPill from "@/components/SocialPill.astro"
+import GitHub from "@/components/icons/GitHub.astro"
+import Orcid from "@/components/icons/Orcid.astro"
+import LinkButton from "./LinkButton.astro"
+import Badge from "./Badge.astro"
+---
+
+<div class="w-full">
+  <div class="flex gap-4 mb-4">
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-white sm:text-4xl [&>strong]:text-red-500"
+  >
+    Hola! Soy <strong><span class="p-name">Alex Martínez Martínez</span></strong>
+  </h1>
+  <div class="mt-4 flex gap-4 flex-wrap">
+    <Badge> Ph.D Student </Badge>
+    <Badge> AI Engineer </Badge>
+    <Badge> Data Scientist </Badge>
+    <Badge> Software Engineer </Badge>
+  </div>
+  <p
+    class="mt-4 text-xl text-white [&>strong]:text-red-500 [&>strong]:font-semibold"
+  >
+    <strong><span class="p-job">Estudiante de Doctorado</span></strong> de Castellón, España. Actualmente estoy trabajando en mi tesis sobre el desarrollo de <strong><span class="p-job">Sistemas de Recomendación</span></strong> para el ámbito de la educación online.
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-4 text-white">
+    <LinkButton href="https://github.com/almtav08">
+      <GitHub class="size-4" />
+      Github
+    </LinkButton>
+    <LinkButton href="https://linkedin.com/in/alex-mart-mart">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </LinkButton>
+    <LinkButton href="https://orcid.org/my-orcid?orcid=0000-0002-3751-705X">
+      <Orcid class="size-4" />
+      OrcID
+    </LinkButton>
+  </nav>
+</div>
+
+<style>
+@keyframes reveal {
+  0% {
+    transform: translate(0, 100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.p-name {
+  display: inline-block;
+  animation: reveal 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
+  animation-fill-mode: backwards;
+}
+
+.p-job {
+  display: inline-block;
+  animation: reveal 1.2s cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
+  animation-fill-mode: backwards;
+}
+</style>

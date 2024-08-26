@@ -15,7 +15,7 @@ export function Messager() {
 
     return (
         <>
-            <Toaster position='bottom-left'/>
+            <Toaster position='bottom-left' visibleToasts={1}/>
             <div id="contact-data" onClick={(e) => handleClick(e)} className="flex md:flex-wrap items-center mt-3 text-sm font-medium text-white/90 justify-center md:justify-start hover:underline cursor-pointer">alemarti AT uji DOT es</div>
         </>
     )

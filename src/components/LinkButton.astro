@@ -5,6 +5,8 @@ const { href } = Astro.props
 <a
   href={href}
   role="link"
+  target="_blank"
+  rel="noopener noreferrer"
   class="inline-flex items-center justify-center gap-2 px-2 py-1 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-red-500/80 text-md hover:opacity-70 hover:border-red-900 group max-w-fit rounded-lg focus:outline-none focus-visible:outline-none focus-visible:ring"
 >
   <slot />

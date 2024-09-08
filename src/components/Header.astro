@@ -44,6 +44,7 @@ const navItems = [
     const navItems = document.querySelectorAll("header nav a")
 
     const callback = (entries: any[]) => {
+      console.log(entries)
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {

@@ -1,26 +1,32 @@
 ---
-import Tailwind from "./icons/Tailwind.astro"
+import TailwindIcon from "./icons/TailwindIcon.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 import AstroIcon from "./icons/AstroIcon.astro"
 import ReactIcon from "./icons/ReactIcon.astro"
+import NextIcon from "./icons/NextIcon.astro"
 
 const TAGS = {
   TAILWIND: {
     name: "Tailwind CSS",
     class: "bg-[#003159] text-white",
-    icon: Tailwind,
+    icon: TailwindIcon,
   },
   ASTRO: {
     name: "Astro",
     class: "bg-[#003159] text-white",
     icon: AstroIcon,
   },
-    REACT: {
-        name: "React",
-        class: "bg-[#003159] text-white",
-        icon: ReactIcon,
-    },
+  REACT: {
+      name: "React",
+      class: "bg-[#003159] text-white",
+      icon: ReactIcon,
+  },
+  NEXT: {
+    name: "Next.js",
+    class: "bg-[#003159] text-white",
+    icon: NextIcon,
+  },
 }
 const PROJECTS = [
   {
@@ -30,6 +36,13 @@ const PROJECTS = [
     link: "https://talecreate-qud4.vercel.app/",
     image: "/projects/tale-create.webp",
     tags: [TAGS.ASTRO, TAGS.REACT, TAGS.TAILWIND],
+  },
+  {
+    title: "Emotion Music - Music Generation",
+    description: "MVP de una plataforma para <strong>generar música usando Inteligencia Artificial basado en como te sientes</strong>. Esto es solo una demo por lo que no se pueden generar canciones reales. <br><div class='mt-2'> © Todos los derechos están reservados.</div>",
+    link: "https://emotion-music.vercel.app/",
+    image: "/projects/emotion-music.webp",
+    tags: [TAGS.NEXT, TAGS.REACT, TAGS.TAILWIND],
   }
 ]
 ---

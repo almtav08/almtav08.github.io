@@ -1,53 +1,93 @@
 ---
-import Layout from "@/layouts/Layout.astro"
-import CodeIcon from "@/components/icons/Code.astro"
-import ProfileCheck from "@/components/icons/ProfileCheck.astro"
-import SectionContainer from "@/components/SectionContainer.astro"
-import Hero from "@/components/Hero.astro"
-import AboutMe from "@/components/AboutMe.astro"
-import Projects from "@/components/Projects.astro"
+import Layout from "@/layouts/Layout.astro";
+import CodeIcon from "@/components/icons/Code.astro";
+import ProfileCheck from "@/components/icons/ProfileCheck.astro";
+import PublicationIcon from "@/components/icons/PublicationIcon.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Hero from "@/components/Hero.astro";
+import AboutMe from "@/components/AboutMe.astro";
+import Projects from "@/components/Projects.astro";
+import Header from "../components/Header.astro";
 ---
 
 <Layout
-  title="Alex Martínez-Martínez"
-  description="Página web personal de Alkex Martínez-Martínez, donde se enlazan todos sus proyectos y contribuciones académicas."
->
-  <main class="px-4">
-    <SectionContainer class="py-16 md:py-28">
-      <Hero>
-      </slot>
-    </Hero>
+  title='Alex Martínez-Martínez'
+  description='Página web personal de Alkex Martínez-Martínez, donde se enlazan todos sus proyectos y contribuciones académicas.'>
+  <Header />
+  <main class='px-4'>
+    <SectionContainer class='py-16 md:py-28'>
+      <Hero />
     </SectionContainer>
-    <div class="space-y-24">
-
-      <SectionContainer id="sobre-mi">
-        <h2
-          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white"
-        >
-          <ProfileCheck class="size-7" />
-          Sobre mí
-        </h2>
-        <AboutMe />
-      </SectionContainer>
-
-    <SectionContainer id="proyectos">
+  </main>
+  <div class='space-y-24'>
+    <SectionContainer id='sobre-mi'>
       <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white"
-      >
-        <CodeIcon class="size-7" />
-        Proyectos
+        class='flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white not-selectable'>
+        <ProfileCheck class='size-7' />
+        Sobre mí
       </h2>
+      <AboutMe />
+    </SectionContainer>
+
+    <SectionContainer id='proyectos'>
+      <div class='flex justify-between w-full'>
+        <h2
+          class='flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white not-selectable'>
+          <CodeIcon class='size-7' />
+          Proyectos
+        </h2>
+        <a
+          href='/projects'
+          class='flex items-center text-white gap-1 cursor-pointer font-semibold duration-300 hover:gap-2 hover:translate-x-3'>
+          Ver más
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            class='icon icon-tabler icons-tabler-outline icon-tabler-arrow-right'
+            ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+              d='M5 12l14 0'></path><path d='M13 18l6 -6'></path><path
+              d='M13 6l6 6'></path></svg
+          >
+        </a>
+      </div>
       <Projects />
     </SectionContainer>
 
-    <SectionContainer id="publicaciones">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white"
-      >
-        <CodeIcon class="size-7" />
-        Publicaciones
-      </h2>
+    <SectionContainer id='publicaciones'>
+      <div class='flex justify-between w-full'>
+        <h2
+          class='flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white not-selectable'>
+          <PublicationIcon class='size-7' />
+          Publicaciones
+        </h2>
+        <a
+          href='/publications'
+          class='flex items-center text-white gap-1 cursor-pointer font-semibold duration-300 hover:gap-2 hover:translate-x-3'>
+          Ver más
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            class='icon icon-tabler icons-tabler-outline icon-tabler-arrow-right'
+            ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path
+              d='M5 12l14 0'></path><path d='M13 18l6 -6'></path><path
+              d='M13 6l6 6'></path></svg
+          >
+        </a>
+      </div>
     </SectionContainer>
   </div>
-  </main>
 </Layout>

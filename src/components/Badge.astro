@@ -1,47 +1,11 @@
-<div class='flex items-center my-badges rounded-3xl relative'>
-  <span class='relative inline-flex p-[1px] rounded-3xl'>
+<div class='flex items-center'>
+  <span class='relative inline-flex overflow-hidden rounded-full p-[1px] w-40'>
+    <span
+      class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ff9d42_0%,#ff6d42_50%,#ff424b_100%)]'
+    ></span>
     <div
-      class='rounded-3xl inline-flex items-center justify-center w-full px-5 py-1 text-sm bg-gray-800 text-white/80 backdrop-blur-3xl whitespace-nowrap not-selectable'>
+      class='inline-flex items-center justify-center w-full px-3 py-1 text-sm rounded-full cursor-pointer bg-slate-800 text-white/80 backdrop-blur-3xl whitespace-nowrap'>
       <slot />
     </div>
   </span>
 </div>
-
-<style>
-  @property --grad-angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-  }
-
-  @keyframes rotation {
-    0% {
-      --grad-angle: 0deg;
-    }
-    100% {
-      --grad-angle: 360deg;
-    }
-  }
-
-  .my-badges::before,
-  .my-badges::after {
-    content: "";
-    position: absolute;
-    background: conic-gradient(
-      from var(--grad-angle),
-      #ff9d42,
-      #ff6d42,
-      #ff424b,
-      #ff6d42,
-      #ff9d42
-    );
-    inset: -0.05rem;
-    z-index: -1;
-    animation: rotation 15s linear infinite;
-    border-radius: inherit;
-  }
-
-  .my-badges::after {
-    filter: blur(0.4rem);
-  }
-</style>

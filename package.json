@@ -4,30 +4,16 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
-    "predeploy": "pnpm run build",
-    "deploy": "gh-pages -d dist",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/partytown": "^2.1.2",
-    "@astrojs/react": "^3.6.2",
-    "@astrojs/tailwind": "^5.1.2",
-    "@fontsource-variable/onest": "^5.1.0",
-    "astro": "^4.16.6",
-    "gh-pages": "^6.2.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "sonner": "^1.5.0",
-    "tailwindcss": "^3.4.14",
-    "typescript": "^5.6.3"
-  },
-  "devDependencies": {
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.1",
-    "puppeteer": "^23.6.0"
+    "@astrojs/preact": "^4.1.0",
+    "@fontsource-variable/onest": "^5.2.8",
+    "@tailwindcss/vite": "^4.1.7",
+    "astro": "^5.7.13",
+    "preact": "^10.26.8",
+    "tailwindcss": "^4.1.7"
   }
 }

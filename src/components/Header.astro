@@ -1,84 +1,96 @@
 ---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import LanguageToggle from "./LanguageToggle.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const navItems = [
   {
-    title: "Sobre mí",
-    label: "sobre-mi",
-    url: "/#sobre-mi",
+    title: t("nav.about"),
+    label: "about-me",
+    url: {
+      en: `/en/#about-me`,
+      es: `/#about-me`,
+    },
   },
   {
-    title: "Proyectos",
-    label: "proyectos",
-    url: "/#proyectos",
+    title: t("nav.projects"),
+    label: "projects",
+    url: {
+      en: `/en/#projects`,
+      es: `/#projects`,
+    },
   },
   {
-    title: "Publicaciones",
-    label: "publicaciones",
-    url: "/#publicaciones",
-  }
-]
+    title: t("nav.publications"),
+    label: "publications",
+    url: {
+      en: `/en/#publications`,
+      es: `/#publications`,
+    },
+  },
+];
 ---
 
 <header
-  class="fixed top-0 md:right-10 z-10 flex items-center justify-center md:justify-end w-full mx-auto mt-2"
->
+  class='fixed top-0 md:right-10 z-10 flex items-center justify-center md:justify-end w-full mx-auto mt-2'>
   <nav
-    class="flex px-3 text-sm font-medium rounded-lg text-gray-200 justify-center items-center"
-  >
+    class='flex px-3 text-sm font-medium rounded-lg text-gray-200 justify-center items-center'>
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-red-300"
+          class='relative block px-2 py-2 transition hover:text-red-300'
           aria-label={link.label}
-          href={link.url}
-        >
+          href={link.url[lang]}>
           {link.title}
         </a>
       ))
     }
+    <LanguageToggle />
   </nav>
 </header>
 
 <script>
   document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll("header nav a")
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
 
     const callback = (entries: any[]) => {
-      console.log(entries)
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-red-500")
+              item.classList.add("text-red-500");
             } else {
-              item.classList.remove("text-red-500")
+              item.classList.remove("text-red-500");
             }
-          })
+          });
         }
-      })
-    }
+      });
+    };
 
     const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
       threshold: 0.3,
-    })
+    });
 
     sections.forEach((section) => {
-      observer.observe(section)
-    })
+      observer.observe(section);
+    });
 
     // Cleanup function
     document.onvisibilitychange = () => {
       if (document.visibilityState === "hidden") {
-        observer.disconnect()
+        observer.disconnect();
       } else {
         sections.forEach((section) => {
-          observer.observe(section)
-        })
+          observer.observe(section);
+        });
       }
-    }
-  })
+    };
+  });
 </script>
 
 <style>
@@ -90,7 +102,11 @@ const navItems = [
 
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg backdrop-blur bg-gray-700;
+      box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(8px);
+      background-color: rgba(55, 65, 81, 0.8);
     }
   }
 </style>

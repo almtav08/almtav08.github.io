@@ -8,14 +8,13 @@ import { PROJECTS } from "@/lib/projects";
 <div class='flex flex-col gap-y-16'>
   {
     PROJECTS.map(
-      ({ image, title, subtitle, description, align, tags, link }) => (
+      ({ image, title, subtitle, description, align, link }) => (
         <article class='flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0'>
           <ImageBlock title={title} image={image} align={align} />
           <ContentBlock
             title={title}
             subtitle={subtitle}
             description={description}
-            tags={tags}
             link={link}
           />
         </article>

@@ -1,27 +1,25 @@
 ---
+import { getLangFromUrl } from "@/i18n/utils";
+import "../styles/global.css";
 import "@fontsource-variable/onest";
-
-import Footer from "../components/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
-
-interface Props {
-  title: string;
-  description: string;
-}
+import Footer from "@/components/Footer.astro";
+import { ClientRouter } from "astro:transitions";
 
 const { description, title } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang='es'>
+<html lang={lang}>
   <head>
     <meta charset='UTF-8' />
-    <meta name='description' content={description} />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
+    <meta name='description' content={description} />
     <title>{title}</title>
-    <ViewTransitions />
+    <ClientRouter />
     <meta name='author' content='Alex Martínez Martínez' />
     <meta name='description' content={description} />
     <meta itemprop='name' content='Alex Martínez Martínez' />
@@ -67,45 +65,25 @@ const { description, title } = Astro.props;
       gtag("js", new Date());
     </script>
   </head>
-
-  <body class='relative text-white'>
+  <body
+    class='w-dvw min-h-dvh bg-zinc-950 relative flex overflow-x-hidden flex-col'>
     <div
-      class='absolute top-0 z-[-2] h-full w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]'>
+      class='absolute w-dvw md:w-[180dvw] md:h-full h-2/5 top-0 md:-left-[40dvw] -z-10 bg-radial-[at_50%_0%] from-slate-800 to-zinc-950 md:to-40% to-80%'>
     </div>
     <slot />
     <Footer />
-    <style is:global>
-      :root {
-        color-scheme: dark;
-      }
-
-      html {
-        font-family: "Onest Variable", system-ui, sans-serif;
-        scroll-behavior: smooth;
-      }
-
-      body {
-        color: rgba(255, 255, 255, 0.9);
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        overscroll-behavior: none;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-      }
-
-      .not-selectable {
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-    </style>
   </body>
 </html>
+
+<style is:global>
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    font-family: "Onest Variable", system-ui, sans-serif;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+  }
+</style>

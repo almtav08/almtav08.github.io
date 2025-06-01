@@ -5,6 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 import preact from '@astrojs/preact';
 
+import partytown from '@astrojs/partytown';
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://almtav08.github.io",
@@ -12,5 +14,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [preact()],
+  integrations: [preact(), partytown()],
 });

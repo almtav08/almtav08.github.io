@@ -18,7 +18,9 @@ export const ui = {
       "en la Universitat Jaume I de Castellón, España. Actualmente trabajando en mi tesis sobre desarrollar",
     "hero.topic": "Sistemas de Recomendación",
     "hero.area": "para la educación online",
-    "publication.read": "Leer",
+    "publication.read": "Acceder al Artículo",
+    "publication.authors": "Autores",
+    "publication.journal": "Revista",
   },
   en: {
     "nav.about": "About me",
@@ -31,6 +33,8 @@ export const ui = {
       "at Universitat Jaume I in Castellón, Spain. Currently working on my thesis about developing",
     "hero.topic": "Recommender Systems",
     "hero.area": "for online education",
-    "publication.read": "Read",
+    "publication.read": "Access the Article",
+    "publication.authors": "Authors",
+    "publication.journal": "Journal",
   },
 } as const;

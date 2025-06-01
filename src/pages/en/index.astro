@@ -5,10 +5,11 @@ import SectionContainer from "@/components/SectionContainer.astro";
 import Header from "@/components/Header.astro";
 import Hero from "@/components/Hero.astro";
 import AboutMe from "@/components/en/AboutMe.astro";
-import ProfileCheck from "@/components/icons/ProfileCheck.astro";
-import CodeIcon from "@/components/icons/Code.astro";
+import ProfileCheck from "@/icons/ProfileCheck.astro";
+import CodeIcon from "@/icons/Code.astro";
 import Projects from "@/components/Projects.astro";
 import Publications from "@/components/Publications.astro";
+import PublicationIcon from "@/icons/PublicationIcon.astro";
 ---
 
 <Layout
@@ -40,7 +41,7 @@ import Publications from "@/components/Publications.astro";
     <SectionContainer id='publications'>
       <h2
         class='flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white not-selectable'>
-        <CodeIcon class='size-7' />
+        <PublicationIcon class='size-7' />
         Publications
       </h2>
       <Publications />

@@ -1,3 +1,5 @@
+import { TAGS } from "./tags";
+
 export const PROJECTS = [
   {
     title: "Tracerec",
@@ -12,7 +14,7 @@ export const PROJECTS = [
     },
     link: "https://pypi.org/project/tracerec/",
     image: "",
-    tags: ["Python", "Machine Learning"],
+    tags: [TAGS.PYTHON],
   },
   {
     title: "Moodle Rec",
@@ -27,6 +29,6 @@ export const PROJECTS = [
     },
     link: "https://github.com/almtav08/moodle_recom",
     image: "",
-    tags: ["Python", "Moodle"],
+    tags: [TAGS.PYTHON, TAGS.HTML, TAGS.PHP],
   },
 ];

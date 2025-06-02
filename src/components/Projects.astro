@@ -41,7 +41,7 @@ const t = useTranslations(lang);
               height={60}
               class='rounded-lg border'
             /> */}
-            <div class="border size-[60px] rounded-lg"/>
+            <div class='border size-[60px] rounded-lg' />
             <div class='flex-1'>
               <div class='text-xl'>{project.title}</div>
               <div class='text-sm font-medium text-primary'>
@@ -60,10 +60,11 @@ const t = useTranslations(lang);
           <div class='space-y-3'>
             <h4 class='font-semibold text-sm'>{t("project.tags")}:</h4>
             <div class='flex flex-wrap gap-2'>
-              {project.tags.map((tech, index) => (
-                <Badge key={index} variant='secondary' class='text-xs'>
-                  {tech}
-                </Badge>
+              {project.tags.map((tag, index) => (
+                <div
+                  class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-4 text-sm font-bold`}>
+                  {tag.name}
+                </div>
               ))}
             </div>
           </div>

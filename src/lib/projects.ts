@@ -2,8 +2,8 @@ export const PROJECTS = [
   {
     title: "Tracerec",
     subtitle: {
-      en: "Recommender Package",
-      es: "Paquete de Recomendación",
+      en: "Python Package",
+      es: "Paquete de Python",
     },
     align: "top",
     description: {
@@ -11,13 +11,14 @@ export const PROJECTS = [
       es: "Un paquete de Python para <strong>sistemas de recomendación</strong> que te permite crear, entrenar y evaluar modelos con facilidad. Soporta filtrado colaborativo, filtrado basado en conocimiento y enfoques híbridos.",
     },
     link: "https://pypi.org/project/tracerec/",
-    image: "/projects/tale.webp",
+    image: "",
+    tags: ["Python", "Machine Learning"],
   },
   {
     title: "Moodle Rec",
     subtitle: {
-      en: "Moodle Recommender Plugin",
-      es: "Plugin de Recomendación para Moodle",
+      en: "Moodle Plugin",
+      es: "Plugin de Moodle",
     },
     align: "center",
     description: {
@@ -25,6 +26,7 @@ export const PROJECTS = [
       es: "Servidor en Python y Plugin de Moodle para <strong>sistemas de recomendación</strong> que te permite incluir un recomendador en la página principal de tus cursos en Moodle.",
     },
     link: "https://github.com/almtav08/moodle_recom",
-    image: "/projects/emotion.webp",
+    image: "",
+    tags: ["Python", "Moodle"],
   },
 ];

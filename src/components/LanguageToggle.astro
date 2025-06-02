@@ -72,7 +72,6 @@ const LANGUAGES = Object.keys(languages).map((lang) => lang.toUpperCase());
     const languagePreference = window.location.pathname.includes("/en")
       ? "en"
       : "es";
-    console.log("Language preference:", languagePreference);
 
     updateIcon(languagePreference);
   };

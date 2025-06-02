@@ -21,6 +21,8 @@ export const ui = {
     "publication.read": "Acceder al Artículo",
     "publication.authors": "Autores",
     "publication.journal": "Revista",
+    "project.link": "Enlace al proyecto",
+    "project.tags": "Tecnologías",
   },
   en: {
     "nav.about": "About me",
@@ -36,5 +38,7 @@ export const ui = {
     "publication.read": "Access the Article",
     "publication.authors": "Authors",
     "publication.journal": "Journal",
+    "project.link": "Project link",
+    "project.tags": "Technologies",
   },
 } as const;

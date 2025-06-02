@@ -2,10 +2,16 @@
 import ContentBlock from "@/components/ContentBlock.astro";
 import ImageBlock from "@/components/ImageBlock.astro";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import Link from "@/icons/Link.astro";
 import { PROJECTS } from "@/lib/projects";
+import Badge from "./Badge.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<div class='flex flex-col gap-y-16'>
+<!-- <div class='flex flex-col gap-y-16'>
   {
     PROJECTS.map(
       ({ image, title, subtitle, description, align, link }) => (
@@ -20,5 +26,60 @@ import { PROJECTS } from "@/lib/projects";
         </article>
       )
     )
+  }
+</div> -->
+<div class='grid grid-cols-1 md:grid-cols-2 gap-8'>
+  {
+    PROJECTS.map((project) => (
+      <div class='flex flex-col h-full hover:shadow-lg transition-shadow bg-slate-800/40 rounded-lg p-4 px-6'>
+        <div>
+          <div class='flex items-center space-x-4 mb-4'>
+            {/* <img
+              src={project.image || "/placeholder.svg"}
+              alt={`${project.title}`}
+              width={60}
+              height={60}
+              class='rounded-lg border'
+            /> */}
+            <div class="border size-[60px] rounded-lg"/>
+            <div class='flex-1'>
+              <div class='text-xl'>{project.title}</div>
+              <div class='text-sm font-medium text-primary'>
+                {project.subtitle[lang]}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='flex-1'>
+          <p
+            class='text-muted-foreground mb-6 leading-relaxed [&>strong]:text-red-500'
+            set:html={project.description[lang]}
+          />
+
+          <div class='space-y-3'>
+            <h4 class='font-semibold text-sm'>{t("project.tags")}:</h4>
+            <div class='flex flex-wrap gap-2'>
+              {project.tags.map((tech, index) => (
+                <Badge key={index} variant='secondary' class='text-xs'>
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class='w-full mt-4'>
+          <a
+            href={project.link}
+            target='_blank'
+            rel='noopener noreferrer'
+            class='flex items-center justify-center gap-x-2 overflow-hidden rounded-md bg-slate-800/30 backdrop-blur-lg px-6 py-2 text-base font-semibold text-white border border-gray-700 hover:scale-105 transition-all duration-300 hover:bg-slate-800/40'>
+            <Link class='size-4' />
+            {t("project.link")}
+          </a>
+        </div>
+      </div>
+    ))
   }
 </div>

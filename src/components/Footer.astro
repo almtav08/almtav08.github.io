@@ -1,5 +1,9 @@
 ---
 import CopyIcon from "@/icons/Copy.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer
@@ -12,19 +16,32 @@ import CopyIcon from "@/icons/Copy.astro";
     </span>
     <span
       id='contact'
-      class='select-none flex md:flex-wrap items-center mt-3 text-sm font-medium text-white/90 justify-center md:justify-start'
+      class='select-none flex md:flex-wrap items-center text-sm sm:text-center font-medium text-white/90 justify-center md:justify-start'
       >alemarti AT uji DOT es
-      <CopyIcon id='contact-icon' class='size-4 ml-2 cursor-pointer' />
+      <CopyIcon id='copy-icon' class='size-4 ml-2 cursor-pointer' />
+      <div
+        id='copy-message'
+        class='fixed w-[30ch] bottom-20 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-md shadow-lg transition-all duration-500 ease-in-out grid place-items-center translate-y-10 opacity-0'>
+        {t("email.copy")}
+      </div>
     </span>
   </div>
 </footer>
 
 <script defer>
   const contact = document.getElementById("contact");
-  const contactIcon = document.getElementById("contact-icon");
-  contactIcon.addEventListener("click", () => {
-    navigator.clipboard.writeText(
-      contact.innerText.replace(" AT ", "@").replace(" DOT ", ".")
-    );
+  const copyIcon = document.getElementById("copy-icon");
+  const copyMessage = document.getElementById("copy-message");
+
+  copyIcon.addEventListener("click", () => {
+    const email = contact.innerText.replace(" AT ", "@").replace(" DOT ", ".");
+    navigator.clipboard.writeText(email).then(() => {
+      copyMessage.classList.remove("translate-y-10", "opacity-0");
+      copyMessage.classList.add("translate-y-0", "opacity-100");
+      setTimeout(() => {
+        copyMessage.classList.remove("translate-y-0", "opacity-100");
+        copyMessage.classList.add("translate-y-10", "opacity-0");
+      }, 2000);
+    });
   });
 </script>

@@ -23,6 +23,7 @@ export const ui = {
     "publication.journal": "Revista",
     "project.link": "Enlace al proyecto",
     "project.tags": "Tecnologías",
+    "email.copy": "¡Email copiado al portapapeles!",
   },
   en: {
     "nav.about": "About me",
@@ -40,5 +41,6 @@ export const ui = {
     "publication.journal": "Journal",
     "project.link": "Project link",
     "project.tags": "Technologies",
+    "email.copy": "Email copied to clipboard!",
   },
 } as const;

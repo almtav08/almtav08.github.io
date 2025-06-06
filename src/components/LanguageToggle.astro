@@ -22,11 +22,11 @@ const LANGUAGES = Object.keys(languages).map((lang) => lang.toUpperCase());
   <div
     transition:persist
     id='language-menu'
-    class='absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[5rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md'>
+    class='absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[5rem] rounded-md border bg-gray-900/90 border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md'>
     <ul>
       {
         LANGUAGES.map((language) => (
-          <li class='language-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm'>
+          <li class='language-menu-option px-2 py-1.5 cursor-default hover:bg-gray-500/50 rounded-sm'>
             {language}
           </li>
         ))
